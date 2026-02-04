@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="BackendExpertos/BackendExpertos.csproj" />
+  <Project Path="ExpertosApi/ExpertosApi.csproj" />
+  <Project Path="PruebasEntity/PruebasEntity.csproj" />
+</Solution>

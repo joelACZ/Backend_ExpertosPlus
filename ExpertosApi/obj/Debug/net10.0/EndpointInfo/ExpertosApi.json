@@ -1,0 +1,558 @@
+{
+  "openapi": "3.0.4",
+  "info": {
+    "title": "ExpertosApi",
+    "version": "1.0"
+  },
+  "paths": {
+    "/api/clientes": {
+      "get": {
+        "tags": [
+          "clientes"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/cliente"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/cliente"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/cliente"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "clientes"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/cliente"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/cliente"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/cliente"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/cliente"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/cliente"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/cliente"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/clientes/{id}": {
+      "get": {
+        "tags": [
+          "clientes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "$ref": "#/components/schemas/cliente"
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/cliente"
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/cliente"
+                }
+              }
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "clientes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/cliente"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/cliente"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/cliente"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "clientes"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/WeatherForecast": {
+      "get": {
+        "tags": [
+          "WeatherForecast"
+        ],
+        "operationId": "GetWeatherForecast",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              },
+              "text/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/WeatherForecast"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "WeatherForecast": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "format": "date"
+          },
+          "temperatureC": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "temperatureF": {
+            "type": "integer",
+            "format": "int32",
+            "readOnly": true
+          },
+          "summary": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "categoria": {
+        "type": "object",
+        "properties": {
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "servicios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/servicio"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "cliente": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "preferencias": {
+            "type": "string",
+            "nullable": true
+          },
+          "notificaciones": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "preferenciasFormateadas": {
+            "type": "string",
+            "nullable": true
+          },
+          "notificacionesFormateada": {
+            "type": "string",
+            "nullable": true
+          },
+          "resenas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/resena"
+            },
+            "nullable": true
+          },
+          "solicitudes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/solicitude"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "profesionale": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "especialidad": {
+            "type": "string",
+            "nullable": true
+          },
+          "telefono": {
+            "type": "string",
+            "nullable": true
+          },
+          "email": {
+            "type": "string",
+            "nullable": true
+          },
+          "ubicacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "oficios": {
+            "type": "string",
+            "nullable": true
+          },
+          "experiencia": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "disponibilidad": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "servicios": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/servicio"
+            },
+            "nullable": true
+          },
+          "solicitudes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/solicitude"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "resena": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "servicio_id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "cliente_id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "calificacion": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "comentario": {
+            "type": "string",
+            "nullable": true
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date",
+            "nullable": true
+          },
+          "anonima": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "cliente": {
+            "$ref": "#/components/schemas/cliente"
+          },
+          "servicio": {
+            "$ref": "#/components/schemas/servicio"
+          }
+        },
+        "additionalProperties": false
+      },
+      "servicio": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "nombre": {
+            "type": "string",
+            "nullable": true
+          },
+          "categoria": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "precioBase": {
+            "type": "number",
+            "format": "double",
+            "nullable": true
+          },
+          "duracionEstimada": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "profesional_id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "activo": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "categoriaNavigation": {
+            "$ref": "#/components/schemas/categoria"
+          },
+          "profesional": {
+            "$ref": "#/components/schemas/profesionale"
+          },
+          "resenas": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/resena"
+            },
+            "nullable": true
+          },
+          "solicitudes": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/solicitude"
+            },
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
+      "solicitude": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "cliente_id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "profesional_id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "servicio_id": {
+            "type": "integer",
+            "format": "int32",
+            "nullable": true
+          },
+          "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "descripcion": {
+            "type": "string",
+            "nullable": true
+          },
+          "ubicacion": {
+            "type": "string",
+            "nullable": true
+          },
+          "urgencia": {
+            "type": "boolean",
+            "nullable": true
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "cliente": {
+            "$ref": "#/components/schemas/cliente"
+          },
+          "profesional": {
+            "$ref": "#/components/schemas/profesionale"
+          },
+          "servicio": {
+            "$ref": "#/components/schemas/servicio"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "tags": [
+    {
+      "name": "clientes"
+    },
+    {
+      "name": "WeatherForecast"
+    }
+  ]
+}
