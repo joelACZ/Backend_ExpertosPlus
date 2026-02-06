@@ -7,25 +7,25 @@ public partial class solicitude
 {
     public int id { get; set; }
 
-    public int? cliente_id { get; set; }
+    public int cliente_id { get; set; }
 
-    public int? profesional_id { get; set; }
+    public int servicio_id { get; set; }
 
-    public int? servicio_id { get; set; }
+    public DateTime fecha { get; set; }
 
-    public string? estado { get; set; }
+    public string estado { get; set; } = null!;
 
-    public string? descripcion { get; set; }
+    public string nivelUrgencia { get; set; } = null!;
 
-    public string? ubicacion { get; set; }
+    public string descripcion { get; set; } = null!;
 
-    public bool? urgencia { get; set; }
+    public string ubicacion { get; set; } = null!;
 
-    public DateTime? fecha { get; set; }
+    public DateTime? fechaCreacion { get; set; }
 
-    public virtual cliente? cliente { get; set; }
+    public DateTime? fechaActualizacion { get; set; }
 
-    public virtual profesionale? profesional { get; set; }
+    public virtual cliente cliente { get; set; } = null!;
 
-    public virtual servicio? servicio { get; set; }
+    public virtual servicio servicio { get; set; } = null!;
 }

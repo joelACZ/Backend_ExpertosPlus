@@ -7,21 +7,17 @@ public partial class cliente
 {
     public int id { get; set; }
 
-    public string? nombre { get; set; }
+    public string nombre { get; set; } = null!;
 
-    public string? email { get; set; }
+    public string email { get; set; } = null!;
 
-    public string? telefono { get; set; }
+    public long telefono { get; set; }
 
     public string? direccion { get; set; }
 
-    public string? preferencias { get; set; }
+    public string preferencias { get; set; } = null!;
 
-    public bool? notificaciones { get; set; }
-
-    public string? preferenciasFormateadas { get; set; }
-
-    public string? notificacionesFormateada { get; set; }
+    public bool notificaciones { get; set; }
 
     public virtual ICollection<resena> resenas { get; set; } = new List<resena>();
 

@@ -7,21 +7,23 @@ public partial class servicio
 {
     public int id { get; set; }
 
-    public string? nombre { get; set; }
+    public string nombre { get; set; } = null!;
 
-    public string? categoria { get; set; }
+    public string categoria { get; set; } = null!;
 
-    public string? descripcion { get; set; }
+    public string descripcion { get; set; } = null!;
 
-    public decimal? precioBase { get; set; }
+    public decimal precioBase { get; set; }
 
-    public int? duracionEstimada { get; set; }
+    public int duracionEstimada { get; set; }
 
     public int? profesional_id { get; set; }
 
-    public bool? activo { get; set; }
+    public bool activo { get; set; }
 
-    public virtual categoria? categoriaNavigation { get; set; }
+    public string? estado { get; set; }
+
+    public virtual categoria categoriaNavigation { get; set; } = null!;
 
     public virtual profesionale? profesional { get; set; }
 

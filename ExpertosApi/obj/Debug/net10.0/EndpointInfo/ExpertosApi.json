@@ -5,188 +5,6 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/categorias": {
-      "get": {
-        "tags": [
-          "categorias"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/categoria"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/categoria"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/categoria"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "categorias"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/categoria"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/categoria"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/categoria"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/categoria"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/categoria"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/categoria"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/categorias/{id}": {
-      "get": {
-        "tags": [
-          "categorias"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/categoria"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/categoria"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/categoria"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "categorias"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/categoria"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/categoria"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/categoria"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "categorias"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/api/clientes": {
       "get": {
         "tags": [
@@ -372,746 +190,6 @@
         }
       }
     },
-    "/api/profesionales": {
-      "get": {
-        "tags": [
-          "profesionales"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/profesionale"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/profesionale"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/profesionale"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "profesionales"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/profesionale"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/profesionale"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/profesionale"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/profesionale"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/profesionale"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/profesionale"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/profesionales/{id}": {
-      "get": {
-        "tags": [
-          "profesionales"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/profesionale"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/profesionale"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/profesionale"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "profesionales"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/profesionale"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/profesionale"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/profesionale"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "profesionales"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/resenas": {
-      "get": {
-        "tags": [
-          "resenas"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/resena"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/resena"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/resena"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "resenas"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/resena"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/resena"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/resena"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/resena"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/resena"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/resena"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/resenas/{id}": {
-      "get": {
-        "tags": [
-          "resenas"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/resena"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/resena"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/resena"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "resenas"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/resena"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/resena"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/resena"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "resenas"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/servicios": {
-      "get": {
-        "tags": [
-          "servicios"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/servicio"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/servicio"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/servicio"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "servicios"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/servicio"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/servicio"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/servicio"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/servicio"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/servicio"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/servicio"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/servicios/{id}": {
-      "get": {
-        "tags": [
-          "servicios"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/servicio"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/servicio"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/servicio"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "servicios"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/servicio"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/servicio"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/servicio"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "servicios"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
-    "/api/solicitudes": {
-      "get": {
-        "tags": [
-          "solicitudes"
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/solicitude"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/solicitude"
-                  }
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "type": "array",
-                  "items": {
-                    "$ref": "#/components/schemas/solicitude"
-                  }
-                }
-              }
-            }
-          }
-        }
-      },
-      "post": {
-        "tags": [
-          "solicitudes"
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/solicitude"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/solicitude"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/solicitude"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/solicitude"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/solicitude"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/solicitude"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/api/solicitudes/{id}": {
-      "get": {
-        "tags": [
-          "solicitudes"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "content": {
-              "text/plain": {
-                "schema": {
-                  "$ref": "#/components/schemas/solicitude"
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/solicitude"
-                }
-              },
-              "text/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/solicitude"
-                }
-              }
-            }
-          }
-        }
-      },
-      "put": {
-        "tags": [
-          "solicitudes"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "requestBody": {
-          "content": {
-            "application/json": {
-              "schema": {
-                "$ref": "#/components/schemas/solicitude"
-              }
-            },
-            "text/json": {
-              "schema": {
-                "$ref": "#/components/schemas/solicitude"
-              }
-            },
-            "application/*+json": {
-              "schema": {
-                "$ref": "#/components/schemas/solicitude"
-              }
-            }
-          }
-        },
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "solicitudes"
-        ],
-        "parameters": [
-          {
-            "name": "id",
-            "in": "path",
-            "required": true,
-            "schema": {
-              "type": "integer",
-              "format": "int32"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          }
-        }
-      }
-    },
     "/WeatherForecast": {
       "get": {
         "tags": [
@@ -1210,8 +288,8 @@
             "nullable": true
           },
           "telefono": {
-            "type": "string",
-            "nullable": true
+            "type": "integer",
+            "format": "int64"
           },
           "direccion": {
             "type": "string",
@@ -1222,16 +300,7 @@
             "nullable": true
           },
           "notificaciones": {
-            "type": "boolean",
-            "nullable": true
-          },
-          "preferenciasFormateadas": {
-            "type": "string",
-            "nullable": true
-          },
-          "notificacionesFormateada": {
-            "type": "string",
-            "nullable": true
+            "type": "boolean"
           },
           "resenas": {
             "type": "array",
@@ -1261,19 +330,19 @@
             "type": "string",
             "nullable": true
           },
-          "especialidad": {
-            "type": "string",
-            "nullable": true
-          },
-          "telefono": {
-            "type": "string",
-            "nullable": true
-          },
           "email": {
             "type": "string",
             "nullable": true
           },
-          "ubicacion": {
+          "telefono": {
+            "type": "integer",
+            "format": "int64"
+          },
+          "direccion": {
+            "type": "string",
+            "nullable": true
+          },
+          "especialidad": {
             "type": "string",
             "nullable": true
           },
@@ -1283,24 +352,15 @@
           },
           "experiencia": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "disponibilidad": {
-            "type": "boolean",
-            "nullable": true
+            "type": "boolean"
           },
           "servicios": {
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/servicio"
-            },
-            "nullable": true
-          },
-          "solicitudes": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/solicitude"
             },
             "nullable": true
           }
@@ -1316,18 +376,15 @@
           },
           "servicio_id": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "cliente_id": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "calificacion": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "comentario": {
             "type": "string",
@@ -1335,11 +392,19 @@
           },
           "fecha": {
             "type": "string",
-            "format": "date",
-            "nullable": true
+            "format": "date-time"
           },
           "anonima": {
-            "type": "boolean",
+            "type": "boolean"
+          },
+          "fechaCreacion": {
+            "type": "string",
+            "format": "date-time",
+            "nullable": true
+          },
+          "fechaActualizacion": {
+            "type": "string",
+            "format": "date-time",
             "nullable": true
           },
           "cliente": {
@@ -1372,13 +437,11 @@
           },
           "precioBase": {
             "type": "number",
-            "format": "double",
-            "nullable": true
+            "format": "double"
           },
           "duracionEstimada": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "profesional_id": {
             "type": "integer",
@@ -1386,7 +449,10 @@
             "nullable": true
           },
           "activo": {
-            "type": "boolean",
+            "type": "boolean"
+          },
+          "estado": {
+            "type": "string",
             "nullable": true
           },
           "categoriaNavigation": {
@@ -1421,20 +487,21 @@
           },
           "cliente_id": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
-          },
-          "profesional_id": {
-            "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
           },
           "servicio_id": {
             "type": "integer",
-            "format": "int32",
-            "nullable": true
+            "format": "int32"
+          },
+          "fecha": {
+            "type": "string",
+            "format": "date-time"
           },
           "estado": {
+            "type": "string",
+            "nullable": true
+          },
+          "nivelUrgencia": {
             "type": "string",
             "nullable": true
           },
@@ -1446,20 +513,18 @@
             "type": "string",
             "nullable": true
           },
-          "urgencia": {
-            "type": "boolean",
+          "fechaCreacion": {
+            "type": "string",
+            "format": "date-time",
             "nullable": true
           },
-          "fecha": {
+          "fechaActualizacion": {
             "type": "string",
             "format": "date-time",
             "nullable": true
           },
           "cliente": {
             "$ref": "#/components/schemas/cliente"
-          },
-          "profesional": {
-            "$ref": "#/components/schemas/profesionale"
           },
           "servicio": {
             "$ref": "#/components/schemas/servicio"
@@ -1471,22 +536,7 @@
   },
   "tags": [
     {
-      "name": "categorias"
-    },
-    {
       "name": "clientes"
-    },
-    {
-      "name": "profesionales"
-    },
-    {
-      "name": "resenas"
-    },
-    {
-      "name": "servicios"
-    },
-    {
-      "name": "solicitudes"
     },
     {
       "name": "WeatherForecast"
