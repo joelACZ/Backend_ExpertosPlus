@@ -71,3 +71,11 @@ C:\Users\Ozmothz\source\repos\BackendExpertos\PruebasEntity\bin\Debug\net10.0\ru
 C:\Users\Ozmothz\source\repos\BackendExpertos\PruebasEntity\bin\Debug\net10.0\BackendExpertos.dll
 C:\Users\Ozmothz\source\repos\BackendExpertos\PruebasEntity\bin\Debug\net10.0\BackendExpertos.pdb
 C:\Users\Ozmothz\source\repos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasE.E98F5CED.Up2Date
+C:\Users\Win-11PRO\source\repos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasEntity.csproj.AssemblyReference.cache
+C:\Users\Win-11PRO\source\repos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasEntity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Win-11PRO\source\repos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasEntity.AssemblyInfoInputs.cache
+C:\Users\Win-11PRO\source\repos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasEntity.AssemblyInfo.cs
+C:\Users\Win-11PRO\source\repos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasEntity.csproj.CoreCompileInputs.cache
+C:\Users\Win-11PRO\source\repos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasEntity.dll
+C:\Users\Win-11PRO\source\repos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\refint\PruebasEntity.dll
+C:\Users\Win-11PRO\source\repos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasEntity.pdb
