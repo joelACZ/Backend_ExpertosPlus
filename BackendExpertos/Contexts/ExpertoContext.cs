@@ -36,14 +36,14 @@ public partial class ExpertoContext : DbContext
     {
         modelBuilder.Entity<categoria>(entity =>
         {
-            entity.HasKey(e => e.nombre).HasName("PK__categori__72AFBCC7D8CEED05");
+            entity.HasKey(e => e.nombre).HasName("PK__categori__72AFBCC73915A36B");
 
             entity.Property(e => e.nombre).HasMaxLength(100);
         });
 
         modelBuilder.Entity<cliente>(entity =>
         {
-            entity.HasKey(e => e.id).HasName("PK__clientes__3213E83FBE6B51BA");
+            entity.HasKey(e => e.id).HasName("PK__clientes__3213E83F4B821A1B");
 
             entity.Property(e => e.direccion).HasMaxLength(255);
             entity.Property(e => e.email).HasMaxLength(100);
@@ -52,7 +52,7 @@ public partial class ExpertoContext : DbContext
 
         modelBuilder.Entity<profesionale>(entity =>
         {
-            entity.HasKey(e => e.id).HasName("PK__profesio__3213E83F249CAB75");
+            entity.HasKey(e => e.id).HasName("PK__profesio__3213E83F564C777D");
 
             entity.Property(e => e.direccion).HasMaxLength(255);
             entity.Property(e => e.email).HasMaxLength(100);
@@ -62,7 +62,7 @@ public partial class ExpertoContext : DbContext
 
         modelBuilder.Entity<resena>(entity =>
         {
-            entity.HasKey(e => e.id).HasName("PK__resenas__3213E83F08561E93");
+            entity.HasKey(e => e.id).HasName("PK__resenas__3213E83FC44FFE8A");
 
             entity.Property(e => e.fecha).HasColumnType("datetime");
             entity.Property(e => e.fechaActualizacion).HasColumnType("datetime");
@@ -83,7 +83,7 @@ public partial class ExpertoContext : DbContext
 
         modelBuilder.Entity<servicio>(entity =>
         {
-            entity.HasKey(e => e.id).HasName("PK__servicio__3213E83F3ABFF1F9");
+            entity.HasKey(e => e.id).HasName("PK__servicio__3213E83FAF00FFE6");
 
             entity.Property(e => e.categoria).HasMaxLength(100);
             entity.Property(e => e.estado).HasMaxLength(50);
@@ -102,7 +102,7 @@ public partial class ExpertoContext : DbContext
 
         modelBuilder.Entity<solicitude>(entity =>
         {
-            entity.HasKey(e => e.id).HasName("PK__solicitu__3213E83FFA3F6DD4");
+            entity.HasKey(e => e.id).HasName("PK__solicitu__3213E83FF474D9DD");
 
             entity.Property(e => e.estado).HasMaxLength(50);
             entity.Property(e => e.fecha).HasColumnType("datetime");

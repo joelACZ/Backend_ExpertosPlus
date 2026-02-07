@@ -23,7 +23,7 @@ public partial class servicio
 
     public string? estado { get; set; }
 
-    public virtual categoria categoriaNavigation { get; set; } = null!;
+    public virtual categoria? categoriaNavigation { get; set; } = null!;
 
     public virtual profesionale? profesional { get; set; }
 
