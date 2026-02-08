@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace BackendExpertos.Models;
+﻿namespace BackendExpertos.Models;
 
 public partial class cliente
 {

@@ -1,15 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BackendExpertos.Contexts;
+using BackendExpertos.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using BackendExpertos.Contexts;
-using BackendExpertos.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace ExpertosApi.Controllers
+
+
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class clientesController : ControllerBase
@@ -21,14 +25,16 @@ namespace ExpertosApi.Controllers
             _context = context;
         }
 
-        // GET: api/clientes
+        // GET: api/clientes - Solo Administrador ve todos los clientes
+        [Authorize(Roles = "Administrador")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<cliente>>> Getclientes()
         {
             return await _context.clientes.ToListAsync();
         }
 
-        // GET: api/clientes/5
+        // GET: api/clientes/5 - Público puede ver un cliente específico
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult<cliente>> Getcliente(int id)
         {
@@ -42,8 +48,9 @@ namespace ExpertosApi.Controllers
             return cliente;
         }
 
-        // PUT: api/clientes/5
+        // PUT: api/clientes/5 - Solo Administrador modifica
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Administrador")]
         [HttpPut("{id}")]
         public async Task<IActionResult> Putcliente(int id, cliente cliente)
         {
@@ -73,8 +80,9 @@ namespace ExpertosApi.Controllers
             return NoContent();
         }
 
-        // POST: api/clientes
+        // POST: api/clientes - Clientes pueden registrarse
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [AllowAnonymous]
         [HttpPost]
         public async Task<ActionResult<cliente>> Postcliente(cliente cliente)
         {
@@ -84,7 +92,8 @@ namespace ExpertosApi.Controllers
             return CreatedAtAction("Getcliente", new { id = cliente.id }, cliente);
         }
 
-        // DELETE: api/clientes/5
+        // DELETE: api/clientes/5 - Solo Administrador elimina
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Deletecliente(int id)
         {

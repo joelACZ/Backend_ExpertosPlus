@@ -12,3 +12,17 @@ C:\Users\Ozmothz\source\repos\BackendExpertos\BackendExpertos\obj\Debug\net10.0\
 C:\Users\Ozmothz\source\repos\BackendExpertos\BackendExpertos\obj\Debug\net10.0\BackendExpertos.pdb
 C:\Users\Ozmothz\source\repos\BackendExpertos\BackendExpertos\obj\Debug\net10.0\BackendExpertos.genruntimeconfig.cache
 C:\Users\Ozmothz\source\repos\BackendExpertos\BackendExpertos\obj\Debug\net10.0\ref\BackendExpertos.dll
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\BackendExpertos\bin\Debug\net10.0\BackendExpertos.deps.json
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\BackendExpertos\bin\Debug\net10.0\BackendExpertos.runtimeconfig.json
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\BackendExpertos\bin\Debug\net10.0\BackendExpertos.dll
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\BackendExpertos\bin\Debug\net10.0\BackendExpertos.pdb
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\BackendExpertos\obj\Debug\net10.0\BackendExpertos.csproj.AssemblyReference.cache
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\BackendExpertos\obj\Debug\net10.0\BackendExpertos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\BackendExpertos\obj\Debug\net10.0\BackendExpertos.AssemblyInfoInputs.cache
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\BackendExpertos\obj\Debug\net10.0\BackendExpertos.AssemblyInfo.cs
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\BackendExpertos\obj\Debug\net10.0\BackendExpertos.csproj.CoreCompileInputs.cache
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\BackendExpertos\obj\Debug\net10.0\BackendExpertos.dll
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\BackendExpertos\obj\Debug\net10.0\refint\BackendExpertos.dll
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\BackendExpertos\obj\Debug\net10.0\BackendExpertos.pdb
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\BackendExpertos\obj\Debug\net10.0\BackendExpertos.genruntimeconfig.cache
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\BackendExpertos\obj\Debug\net10.0\ref\BackendExpertos.dll

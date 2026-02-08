@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "ExpertosApi.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "login",
+        "Type": "ExpertosApi.Controllers.AuthController\u002BLoginModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "ExpertosApi.Controllers.categoriasController",
     "Method": "Getcategorias",
     "RelativePath": "api/categorias",

@@ -1,16 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BackendExpertos.Contexts;
+using BackendExpertos.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using BackendExpertos.Contexts;
-using BackendExpertos.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace ExpertosApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
+
     [ApiController]
     public class solicitudesController : ControllerBase
     {
@@ -21,14 +24,18 @@ namespace ExpertosApi.Controllers
             _context = context;
         }
 
-        // GET: api/solicitudes
+
+        // GET: api/solicitudes - Admin ve todas, Profesional/Cliente ven las suyas
+        [Authorize(Roles = "Administrador,Profesional,Cliente")]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<solicitude>>> Getsolicitudes()
         {
             return await _context.solicitudes.ToListAsync();
         }
 
-        // GET: api/solicitudes/5
+
+        // GET: api/solicitudes/5 - Admin o los involucrados
+        [Authorize(Roles = "Administrador,Profesional,Cliente")]
         [HttpGet("{id}")]
         public async Task<ActionResult<solicitude>> Getsolicitude(int id)
         {
@@ -42,8 +49,9 @@ namespace ExpertosApi.Controllers
             return solicitude;
         }
 
-        // PUT: api/solicitudes/5
+        // PUT: api/solicitudes/5 - Solo Admin o Profesional (para cambiar estado)
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Administrador,Profesional")]
         [HttpPut("{id}")]
         public async Task<IActionResult> Putsolicitude(int id, solicitude solicitude)
         {
@@ -73,8 +81,10 @@ namespace ExpertosApi.Controllers
             return NoContent();
         }
 
-        // POST: api/solicitudes
+
+        // POST: api/solicitudes - Solo Clientes crean solicitudes
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Cliente")]
         [HttpPost]
         public async Task<ActionResult<solicitude>> Postsolicitude(solicitude solicitude)
         {
@@ -84,7 +94,8 @@ namespace ExpertosApi.Controllers
             return CreatedAtAction("Getsolicitude", new { id = solicitude.id }, solicitude);
         }
 
-        // DELETE: api/solicitudes/5
+        // DELETE: api/solicitudes/5 - Solo Admin
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Deletesolicitude(int id)
         {

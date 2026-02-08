@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace BackendExpertos.Models;
+﻿namespace BackendExpertos.Models;
 
 public partial class resena
 {
@@ -23,7 +20,7 @@ public partial class resena
 
     public DateTime? fechaActualizacion { get; set; }
 
-    public virtual cliente? cliente { get; set; } = null!;
+    public virtual cliente cliente { get; set; } = null!;
 
-    public virtual servicio? servicio { get; set; } = null!;
+    public virtual servicio servicio { get; set; } = null!;
 }

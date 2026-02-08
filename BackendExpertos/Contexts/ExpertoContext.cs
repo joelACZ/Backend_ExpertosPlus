@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using BackendExpertos.Models;
+﻿using BackendExpertos.Models;
 using Microsoft.EntityFrameworkCore;
 
 namespace BackendExpertos.Contexts;
@@ -16,6 +14,8 @@ public partial class ExpertoContext : DbContext
     {
     }
 
+    public virtual DbSet<User> Users { get; set; }
+
     public virtual DbSet<categoria> categorias { get; set; }
 
     public virtual DbSet<cliente> clientes { get; set; }
@@ -30,20 +30,31 @@ public partial class ExpertoContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=.\\SQLEXPRESS;Database=oficiosLocales;Trusted_Connection=True;MultipleActiveResultSets=True;TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Server=DESKTOP-LEFET2G;Database=oficiosLocales;Trusted_Connection=True;MultipleActiveResultSets=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__Users__3214EC07FF9E5A80");
+
+            entity.HasIndex(e => e.Username, "UQ__Users__536C85E46070932E").IsUnique();
+
+            entity.Property(e => e.Password).HasMaxLength(50);
+            entity.Property(e => e.Role).HasMaxLength(50);
+            entity.Property(e => e.Username).HasMaxLength(50);
+        });
+
         modelBuilder.Entity<categoria>(entity =>
         {
-            entity.HasKey(e => e.nombre).HasName("PK__categori__72AFBCC73915A36B");
+            entity.HasKey(e => e.nombre).HasName("PK__categori__72AFBCC78A99D258");
 
             entity.Property(e => e.nombre).HasMaxLength(100);
         });
 
         modelBuilder.Entity<cliente>(entity =>
         {
-            entity.HasKey(e => e.id).HasName("PK__clientes__3213E83F4B821A1B");
+            entity.HasKey(e => e.id).HasName("PK__clientes__3213E83F85F57932");
 
             entity.Property(e => e.direccion).HasMaxLength(255);
             entity.Property(e => e.email).HasMaxLength(100);
@@ -52,7 +63,7 @@ public partial class ExpertoContext : DbContext
 
         modelBuilder.Entity<profesionale>(entity =>
         {
-            entity.HasKey(e => e.id).HasName("PK__profesio__3213E83F564C777D");
+            entity.HasKey(e => e.id).HasName("PK__profesio__3213E83FFE1FBFAE");
 
             entity.Property(e => e.direccion).HasMaxLength(255);
             entity.Property(e => e.email).HasMaxLength(100);
@@ -62,7 +73,7 @@ public partial class ExpertoContext : DbContext
 
         modelBuilder.Entity<resena>(entity =>
         {
-            entity.HasKey(e => e.id).HasName("PK__resenas__3213E83FC44FFE8A");
+            entity.HasKey(e => e.id).HasName("PK__resenas__3213E83F3838CA01");
 
             entity.Property(e => e.fecha).HasColumnType("datetime");
             entity.Property(e => e.fechaActualizacion).HasColumnType("datetime");
@@ -83,7 +94,7 @@ public partial class ExpertoContext : DbContext
 
         modelBuilder.Entity<servicio>(entity =>
         {
-            entity.HasKey(e => e.id).HasName("PK__servicio__3213E83FAF00FFE6");
+            entity.HasKey(e => e.id).HasName("PK__servicio__3213E83F9D6A374D");
 
             entity.Property(e => e.categoria).HasMaxLength(100);
             entity.Property(e => e.estado).HasMaxLength(50);
@@ -102,7 +113,7 @@ public partial class ExpertoContext : DbContext
 
         modelBuilder.Entity<solicitude>(entity =>
         {
-            entity.HasKey(e => e.id).HasName("PK__solicitu__3213E83FF474D9DD");
+            entity.HasKey(e => e.id).HasName("PK__solicitu__3213E83F5C9F05D7");
 
             entity.Property(e => e.estado).HasMaxLength(50);
             entity.Property(e => e.fecha).HasColumnType("datetime");

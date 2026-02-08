@@ -1,20 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BackendExpertos.Contexts;
+using BackendExpertos.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using BackendExpertos.Contexts;
-using BackendExpertos.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
+
 
 namespace ExpertosApi.Controllers
 {
+
     [Route("api/[controller]")]
     [ApiController]
     public class categoriasController : ControllerBase
     {
         private readonly ExpertoContext _context;
+
 
         public categoriasController(ExpertoContext context)
         {
@@ -42,6 +46,7 @@ namespace ExpertosApi.Controllers
             return categoria;
         }
 
+     
         // PUT: api/categorias/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
@@ -98,7 +103,10 @@ namespace ExpertosApi.Controllers
             return CreatedAtAction("Getcategoria", new { id = categoria.nombre }, categoria);
         }
 
+
+
         // DELETE: api/categorias/5
+        
         [HttpDelete("{id}")]
         public async Task<IActionResult> Deletecategoria(string id)
         {

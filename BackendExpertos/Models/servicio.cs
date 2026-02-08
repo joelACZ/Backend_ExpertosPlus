@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace BackendExpertos.Models;
+﻿namespace BackendExpertos.Models;
 
 public partial class servicio
 {
@@ -23,7 +20,7 @@ public partial class servicio
 
     public string? estado { get; set; }
 
-    public virtual categoria? categoriaNavigation { get; set; } = null!;
+    public virtual categoria categoriaNavigation { get; set; } = null!;
 
     public virtual profesionale? profesional { get; set; }
 

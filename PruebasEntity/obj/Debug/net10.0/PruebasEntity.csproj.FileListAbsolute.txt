@@ -1,0 +1,14 @@
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\PruebasEntity\bin\Debug\net10.0\PruebasEntity.exe
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\PruebasEntity\bin\Debug\net10.0\PruebasEntity.deps.json
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\PruebasEntity\bin\Debug\net10.0\PruebasEntity.runtimeconfig.json
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\PruebasEntity\bin\Debug\net10.0\PruebasEntity.dll
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\PruebasEntity\bin\Debug\net10.0\PruebasEntity.pdb
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasEntity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasEntity.AssemblyInfoInputs.cache
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasEntity.AssemblyInfo.cs
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasEntity.csproj.CoreCompileInputs.cache
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasEntity.dll
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\refint\PruebasEntity.dll
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasEntity.pdb
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\PruebasEntity.genruntimeconfig.cache
+C:\Users\Win-11PRO\Downloads\BackendExpertos\BackendExpertos\PruebasEntity\obj\Debug\net10.0\ref\PruebasEntity.dll

@@ -1,15 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BackendExpertos.Contexts;
+using BackendExpertos.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using BackendExpertos.Contexts;
-using BackendExpertos.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace ExpertosApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class serviciosController : ControllerBase
@@ -21,14 +23,16 @@ namespace ExpertosApi.Controllers
             _context = context;
         }
 
-        // GET: api/servicios
+        // GET: api/servicios - Público puede ver servicios
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<servicio>>> Getservicios()
         {
             return await _context.servicios.ToListAsync();
         }
 
-        // GET: api/servicios/5
+        // GET: api/servicios/5 - Público
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult<servicio>> Getservicio(int id)
         {
@@ -42,8 +46,9 @@ namespace ExpertosApi.Controllers
             return servicio;
         }
 
-        // PUT: api/servicios/5
+        // PUT: api/servicios/5 - Solo Profesional (sus servicios) o Admin
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Administrador,Profesional")]
         [HttpPut("{id}")]
         public async Task<IActionResult> Putservicio(int id, servicio servicio)
         {
@@ -73,8 +78,9 @@ namespace ExpertosApi.Controllers
             return NoContent();
         }
 
-        // POST: api/servicios
+        // POST: api/servicios - Solo Profesionales crean servicios
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Profesional")]
         [HttpPost]
         public async Task<ActionResult<servicio>> Postservicio(servicio servicio)
         {
@@ -84,7 +90,8 @@ namespace ExpertosApi.Controllers
             return CreatedAtAction("Getservicio", new { id = servicio.id }, servicio);
         }
 
-        // DELETE: api/servicios/5
+        // DELETE: api/servicios/5 - Solo Admin
+        [Authorize(Roles = "Administrador")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Deleteservicio(int id)
         {

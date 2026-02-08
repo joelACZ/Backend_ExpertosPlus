@@ -8,23 +8,23 @@
     "net10.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Ozmothz\\.nuget\\packages\\": {},
+    "C:\\Users\\Win-11PRO\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ozmothz\\source\\repos\\BackendExpertos\\PruebasEntity\\PruebasEntity.csproj",
+      "projectUniqueName": "C:\\Users\\Win-11PRO\\Desktop\\Backend_ExpertosPlus\\PruebasEntity\\PruebasEntity.csproj",
       "projectName": "PruebasEntity",
-      "projectPath": "C:\\Users\\Ozmothz\\source\\repos\\BackendExpertos\\PruebasEntity\\PruebasEntity.csproj",
-      "packagesPath": "C:\\Users\\Ozmothz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ozmothz\\source\\repos\\BackendExpertos\\PruebasEntity\\obj\\",
+      "projectPath": "C:\\Users\\Win-11PRO\\Desktop\\Backend_ExpertosPlus\\PruebasEntity\\PruebasEntity.csproj",
+      "packagesPath": "C:\\Users\\Win-11PRO\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Win-11PRO\\Desktop\\Backend_ExpertosPlus\\PruebasEntity\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ozmothz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Win-11PRO\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -72,7 +72,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.102/PortableRuntimeIdentifierGraph.json",
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.101/PortableRuntimeIdentifierGraph.json",
         "packagesToPrune": {
           "Microsoft.CSharp": "(,4.7.32767]",
           "Microsoft.VisualBasic": "(,10.4.32767]",

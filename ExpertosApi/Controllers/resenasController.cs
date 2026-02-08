@@ -1,15 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using BackendExpertos.Contexts;
+using BackendExpertos.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using BackendExpertos.Contexts;
-using BackendExpertos.Models;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace ExpertosApi.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class resenasController : ControllerBase
@@ -21,14 +23,17 @@ namespace ExpertosApi.Controllers
             _context = context;
         }
 
-        // GET: api/resenas
+        // GET: api/resenas - Público puede ver reseñas
+        [AllowAnonymous]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<resena>>> Getresenas()
         {
             return await _context.resenas.ToListAsync();
         }
 
-        // GET: api/resenas/5
+
+        // GET: api/resenas/5 - Público
+        [AllowAnonymous]
         [HttpGet("{id}")]
         public async Task<ActionResult<resena>> Getresena(int id)
         {
@@ -42,8 +47,9 @@ namespace ExpertosApi.Controllers
             return resena;
         }
 
-        // PUT: api/resenas/5
+        // PUT: api/resenas/5 - Solo quien creó la reseña o Admin
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Administrador,Cliente")]
         [HttpPut("{id}")]
         public async Task<IActionResult> Putresena(int id, resena resena)
         {
@@ -73,8 +79,10 @@ namespace ExpertosApi.Controllers
             return NoContent();
         }
 
-        // POST: api/resenas
+
+        // POST: api/resenas - Solo clientes pueden reseñar
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+        [Authorize(Roles = "Cliente")]
         [HttpPost]
         public async Task<ActionResult<resena>> Postresena(resena resena)
         {
@@ -84,7 +92,9 @@ namespace ExpertosApi.Controllers
             return CreatedAtAction("Getresena", new { id = resena.id }, resena);
         }
 
-        // DELETE: api/resenas/5
+        // DELETE: api/resenas/5 - Solo Admin o quien creó la reseña
+        
+        [Authorize(Roles = "Administrador,Cliente")]
         [HttpDelete("{id}")]
         public async Task<IActionResult> Deleteresena(int id)
         {
